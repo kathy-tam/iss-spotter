@@ -24,12 +24,12 @@ fetchMyIP((error, ip) => {
 */
 
 /* Manual test for fetching geolocation coordinates
-fetchCoordsByIp("99.232.127.158", (error, coords) => {
+fetchCoordsByIP("99.232.127.158", (error, coords) => {
   if (error) {
     console.log("It didn't work!" , error);
     return;
   }
-
+  
   console.log('It worked! Returned coordinates:' , coords);
 });
 */

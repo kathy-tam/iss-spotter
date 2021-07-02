@@ -10,7 +10,7 @@ const request = require('request');
  */
 const fetchMyIP = function(callback) {
   // use request to fetch IP address from JSON API
-  request('https://api.ipify.org?format=json/${ip}', (error, response, body) => {
+  request('https://api.ipify.org?format=json', (error, response, body) => {
     // inside the request callback ...
     // error can be set if invalid domain, user is offline, etc.
     if (error) {
@@ -40,7 +40,7 @@ const fetchMyIP = function(callback) {
  *   - The lat and lng as an object (null if error). Example:
  *     { latitude: '49.27670', longitude: '-123.13000' }
  */
-const fetchCoordsByIp = function(ip, callback) {
+const fetchCoordsByIP = function(ip, callback) {
   request(`https://freegeoip.app/json/${ip}`, (error, response, body) => {
     if (error) {
       callback(error, null);
